@@ -1,10 +1,10 @@
 # p4-t2-networking-alu0101043838
 
-# ESTABLECIENDO CONEXIONES CON SOCKETS
+## Estableciendo conexiones con socketis
 
 En este capítulo, aprenderemos a crear Sockets utilizando node.js
 
-# ESCRIBIENDO DATOS EN UN SOCKET
+## Escribiendo datos en un socket
 
 Antes que nada, crearemos un directorio llamado networking, en el que iremos añadiendo los distintos archivos.js que aparecen en el capítulo. Empezamos con el primer archivo, 'net-watcher.js'. En ella llamamos a los módulos Nojde.js fs y net:
 
