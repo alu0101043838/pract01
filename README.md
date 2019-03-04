@@ -90,3 +90,39 @@ Ejecutamos en una terminal el servicio de prueba (node test-json-service.js) y e
 ![captura de pantalla de 2019-03-04 12-27-37](https://user-images.githubusercontent.com/38528985/53747181-9c51c100-3e9a-11e9-8c62-7ae9dbac028b.png)
 
 Ahora tendremos un servidor y un cliente que utilizan un formato de mensaje personalizado para comunicarse de manera fiable.
+
+## Desarrollo de pruebas unitarias con Mocha
+
+Mocha es un popular marco de pruebas para Node.js. Cuenta con varios estilos diferentes para describir nuestras pruebas. Debemos instalar instalado npm y después de esto, debemos desarrollar una prueba unitaria para la clase LDJClient.
+
+## Instalando Mocha con npm
+
+Hemos ejecutado el comando npm init -y en nuestro directorio networking, y directamente se nos ha creado por defecto un archivo package.json. Seguidamente hemos introducido el comando: npm install --save-dev --save-exact mocha@3.4.2. Después de instalar esto, haciendo un cat package.json, podemos comprobar que se ha descargado correctamente:
+
+![captura de pantalla de 2019-03-04 16-41-54](https://user-images.githubusercontent.com/38528985/53748046-74635d00-3e9c-11e9-9669-5db18bf8d86f.png)
+
+## Versionamiento semántico de paquetes
+
+La etiqueta --save-exact le dice a npm que versión específica queremos instalar. Por defecto, npm usa el versionamiento semántico para encontrar la mejor versión disponible de un paquete.
+
+El número de la versión consta de tres partes unidas por puntos, la versión principal, la versión menor y el parche.
+
+ - Si la modificación del código no introduce o elimina ninguna funcionalidad, se incrementa la versión del parche.
+ - Si la modificación introduce funcionalidad pero no elimina o altera la funcionalidad ya existente, se incrementa la versión menor y se resetea el parche.
+ - Si la modificación altera o rompe la funcionalidad existente, se incrementa la versión principal y se resetea la versión menor y el parche.
+ 
+## Escribiendo pruebas unitarias con Mocha
+
+Hemos creado un directorio /networking/test para mantener el código relacionado con la prueba. Hemos llamado al archivo ldj-client-test.js:
+
+![captura de pantalla de 2019-03-04 12-37-51](https://user-images.githubusercontent.com/38528985/53748336-11be9100-3e9d-11e9-8229-cfed50477bec.png)
+
+## Ejecutando pruebas con npm
+
+Para ejecutar las pruebas usando npm, debemos añadir una entrada al fichero package.json:
+
+![captura de pantalla de 2019-03-04 12-47-34](https://user-images.githubusercontent.com/38528985/53748473-4d595b00-3e9d-11e9-830c-4c92ebe1c893.png)
+
+Luego, ejecutando npm test, se realiza la ejecución de prueba:
+
+![captura de pantalla de 2019-03-04 12-48-32](https://user-images.githubusercontent.com/38528985/53748548-71b53780-3e9d-11e9-86af-7eb507ddb108.png)
