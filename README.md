@@ -63,3 +63,32 @@ Lo ejecutamos en la terminal: node test-json-service.js. Este servicio de prueba
 
 ![captura de pantalla de 2019-03-04 12-09-04](https://user-images.githubusercontent.com/38528985/53746074-5562cc00-3e98-11e9-81fd-18111b800a32.png)
 
+## Extendiendo las clases básicas en módulos personalizados
+
+El programa que hicimos en la sección anterior tenía una debilidad en el código del cliente, no sacaba las entradas. Cualquier mensaje que llega como eventos de datos múltiples da error. El programa cliente tiene dos trabajos que hacer, uno es sacar datos entrantes en mensajes, y el otro es manejar cada mensaje cuando llegue.
+
+Para no tener que meter ambos trabajos en un mismo programa, la solución correcta es transformar al menos uno de ellos en un módulo Node.js. Crearemos un módulo que maneje la pieza de entrada para que el programa principal pueda obtener mensajes completos.
+
+## Funcionalidad de exportación en un módulo
+
+En este apartado, vamos a exponer a LDJClient como un módulo. Empezamos por crear dentro del directorio de trabajo networking, otro directorio llamado lib. Dentro de este directorio creamos el fichero ldj-client.js:
+
+![captura de pantalla de 2019-03-04 12-25-10](https://user-images.githubusercontent.com/38528985/53746359-ed60b580-3e98-11e9-9b77-5cae4fcf47b0.png)
+
+El objeto module.exports es el puente entre el código del módulo y el mundo exterior.
+
+## Importando un módulo Node.js personalizado
+
+En este apartado, modificamos el cliente para usarlo en lugar de leer directamente desde el flujo TCP, llamando a este fichero net-watcher-ldj-client.js:
+
+![captura de pantalla de 2019-03-04 12-25-34](https://user-images.githubusercontent.com/38528985/53746809-e2f2eb80-3e99-11e9-958e-9de4740107f8.png)
+
+Es similar al programa net-watcher-json-client. La principal diferencia es que en lugar de enviar buffers de datos directamente a JSON.parse, este programa se basa en el módulo LDJClient para producir eventos de mensaje. 
+
+![captura de pantalla de 2019-03-04 12-25-34](https://user-images.githubusercontent.com/38528985/53747160-93f98600-3e9a-11e9-8799-042edf2f7f84.png)
+
+Ejecutamos en una terminal el servicio de prueba (node test-json-service.js) y en otra terminal el nuevo cliente para conectarse:
+
+![captura de pantalla de 2019-03-04 12-27-37](https://user-images.githubusercontent.com/38528985/53747181-9c51c100-3e9a-11e9-8c62-7ae9dbac028b.png)
+
+Ahora tendremos un servidor y un cliente que utilizan un formato de mensaje personalizado para comunicarse de manera fiable.
