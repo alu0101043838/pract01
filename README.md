@@ -123,6 +123,8 @@ Para ejecutar las pruebas usando npm, debemos añadir una entrada al fichero pac
 
 ![captura de pantalla de 2019-03-04 16-50-02](https://user-images.githubusercontent.com/38528985/53748631-a1fcd600-3e9d-11e9-85e8-91e2ec9df1e8.png)
 
+Visualizando el contenido del fichero package.json, quedaría así:
+
 ![captura de pantalla de 2019-03-04 16-50-43](https://user-images.githubusercontent.com/38528985/53748664-b17c1f00-3e9d-11e9-9470-f724075990e0.png)
 
 Luego, ejecutando npm test, se realiza la ejecución de prueba:
