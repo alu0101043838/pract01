@@ -1,5 +1,9 @@
 # p4-t2-networking-alu0101043838
 
+## Integración continua con Travis
+
+BADGE: [![Build Status](https://travis-ci.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838.svg?token=Sx6sZ2qtpxBy4Pycr9Pq&branch=master)](https://travis-ci.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838)
+
 ## Estableciendo conexiones con sockets
 
 En este capítulo, aprenderemos a crear Sockets utilizando node.js
