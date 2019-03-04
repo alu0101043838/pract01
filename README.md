@@ -8,7 +8,7 @@ ESCRIBIENDO DATOS EN UN SOCKET
 
 Antes que nada, crearemos un directorio llamado networking, en el que iremos añadiendo los distintos archivos.js que aparecen en el capítulo. Empezamos con el primer archivo, 'net-watcher.js'. En ella llamamos a los módulos Nojde.js fs y net:
 
-![captura de pantalla de 2019-02-20 21-21-02](https://user-images.githubusercontent.com/38528985/53738914-6b689080-3e88-11e9-9290-0e1d225ee65c.png)
+![captura de pantalla de 2019-03-04 11-33-39](https://user-images.githubusercontent.com/38528985/53738985-9bb02f00-3e88-11e9-89a8-a68bd10cdba4.png)
 
 Nos fijamos en la función callback dada a createServer(), esta función hace principalmente tres cosas:
  - La primera, reportar que la conexión se ha establecido.
