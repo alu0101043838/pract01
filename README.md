@@ -59,4 +59,7 @@ Aquí implementaremos un servicio de prueba que divide a propósito un mensaje e
 
 ![captura de pantalla de 2019-03-04 12-09-35](https://user-images.githubusercontent.com/38528985/53741400-32cbb580-3e8e-11e9-9fdf-9a38ea385d7f.png)
 
-Lo ejecutamos en la terminal: node test-json-service.js
+Lo ejecutamos en la terminal: node test-json-service.js. Este servicio de prueba difiere de nuestro programa de servicio anterior en algunos aspectos. En lugar de configurar un observador del sistema de archivos, como hicimos para el servicio real, aquí solo enviamos el primer fragmento predeterminado de inmediato. Mientras ejecutamos y vemos como está esperando, ejecutamos en otra terminal el programa del cliente. Esto nos da un error porque el mensaje no está completo:
+
+![captura de pantalla de 2019-03-04 12-09-04](https://user-images.githubusercontent.com/38528985/53746074-5562cc00-3e98-11e9-81fd-18111b800a32.png)
+
