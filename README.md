@@ -85,8 +85,6 @@ En este apartado, modificamos el cliente para usarlo en lugar de leer directamen
 
 Es similar al programa net-watcher-json-client. La principal diferencia es que en lugar de enviar buffers de datos directamente a JSON.parse, este programa se basa en el módulo LDJClient para producir eventos de mensaje. 
 
-![captura de pantalla de 2019-03-04 12-25-34](https://user-images.githubusercontent.com/38528985/53747160-93f98600-3e9a-11e9-8799-042edf2f7f84.png)
-
 Ejecutamos en una terminal el servicio de prueba (node test-json-service.js) y en otra terminal el nuevo cliente para conectarse:
 
 ![captura de pantalla de 2019-03-04 12-27-37](https://user-images.githubusercontent.com/38528985/53747181-9c51c100-3e9a-11e9-8c62-7ae9dbac028b.png)
