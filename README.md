@@ -147,6 +147,10 @@ Lo que hacemos es editar el fichero 'ldj-client-test.js', añadiendo las pruebas
 
 ![Captura de pantalla de 2019-03-09 13-35-39](https://user-images.githubusercontent.com/38528985/54072265-5b79f380-4270-11e9-88c2-2c3402256033.png)
 
+Es importante, añadir en el constructor, la opcion para comprobar si el stream es null, y en caso de que sea así, aparezca el error por pantalla:
+
+![Captura de pantalla de 2019-03-09 13-37-55](https://user-images.githubusercontent.com/38528985/54072285-ad227e00-4270-11e9-9882-ed19ada2fa57.png)
+
 Vemos, al ejecutar las pruebas, que funcionan correctamente:
 
 ![Captura de pantalla de 2019-03-09 13-35-23](https://user-images.githubusercontent.com/38528985/54072266-63d22e80-4270-11e9-8e1b-9c1a1fd12f0d.png)
