@@ -1,14 +1,8 @@
 {
-  "name": "edgar",
+  "name": "p4-t2-networking-alu0101043838",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Integración continua con Travis",
   "main": "index.js",
-  "dependencies": {
-    "figlet": "^1.2.1",
-    "gulp-cli": "^2.0.1",
-    "mime": "^1.4.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,3 +17,4 @@
   },
   "homepage": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838#readme"
 }
+
