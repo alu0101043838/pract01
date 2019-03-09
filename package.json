@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "p4-t2-networking-alu0101043838",
   "version": "1.0.0",
   "description": "## Estableciendo conexiones con sockets",
@@ -17,7 +16,6 @@
     "url": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838/issues"
   },
   "homepage": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838#readme"
-=======
   "requires": true,
   "lockfileVersion": 1,
   "dependencies": {
@@ -31,5 +29,4 @@
       "version": "8.0.2"
     }
   }
->>>>>>> 19f048bcff673ac6983128cb9fef622c10e63df9
 }
