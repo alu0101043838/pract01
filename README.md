@@ -172,5 +172,18 @@ Comprobamos que la prueba funciona correctamente:
 
 ![Captura de pantalla de 2019-03-09 13-54-18](https://user-images.githubusercontent.com/38528985/54072462-fb388100-4272-11e9-9470-f544ce49e1c9.png)
  
+La tercera pregunta nos dice: ¿Qué sucede si el último evento de datos completa un mensaje JSON, pero sin la nueva línea final?
+
+  - Lo que sucede es que el programa fallaría, porque no sabe manejar ese tipo de errores.
+  
+La cuarta pregunta nos pide escribir un caso en el que el objeto de flujo envíe un evento de datos que contenga JSON pero no una nueva línea, seguido de un evento de cierre.
+
+  - Creamos una prueba unitaria en 'ldj-client-test.js' donde añadimos el stream que emite el evento de cierre:
+  
+  
+Comprobamos que funciona correctamente:
 
 
+La última pregunta nos dice: ¿Debería LDJClient emitir un evento cercano para sus listeners?
+
+  - Debería emitirlo cuando sus listeners no estén enviando nada y también cuando hayan avisado de que cierran la conexión.
