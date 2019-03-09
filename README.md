@@ -180,9 +180,15 @@ La cuarta pregunta nos pide escribir un caso en el que el objeto de flujo envíe
 
   - Creamos una prueba unitaria en 'ldj-client-test.js' donde añadimos el stream que emite el evento de cierre:
   
+  ![Captura de pantalla de 2019-03-09 14-25-43](https://user-images.githubusercontent.com/38528985/54072752-3fc61b80-4277-11e9-9671-d676ab6cd8c9.png)
+  
+  - Modificamos el constructor añadiendo un stream.on donde comprueba si se encuentra el '}' final, y no el salto de línea:
+  
+  ![Captura de pantalla de 2019-03-09 14-26-11](https://user-images.githubusercontent.com/38528985/54072757-4f456480-4277-11e9-81a1-00a9c391ed62.png)
   
 Comprobamos que funciona correctamente:
 
+![Captura de pantalla de 2019-03-09 14-26-31](https://user-images.githubusercontent.com/38528985/54072762-5bc9bd00-4277-11e9-8d63-3c828fb7697c.png)
 
 La última pregunta nos dice: ¿Debería LDJClient emitir un evento cercano para sus listeners?
 
