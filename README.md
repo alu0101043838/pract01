@@ -134,3 +134,19 @@ Visualizando el contenido del fichero package.json, quedaría así:
 Luego, ejecutando npm test, se realiza la ejecución de prueba:
 
 ![captura de pantalla de 2019-03-04 12-48-32](https://user-images.githubusercontent.com/38528985/53748548-71b53780-3e9d-11e9-86af-7eb507ddb108.png)
+
+## Ejercicios
+
+## Testability
+
+Este ejercicio lo que nos pide es añadir dos pruebas unitarias:
+   - La primera, para para un solo mensaje que se divide en dos o más eventos de datos desde el stream.
+   - La segunda, que pase un null al constructor LDJClient, y lance un error.
+   
+Lo que hacemos es editar el fichero 'ldj-client-test.js', añadiendo las pruebas:
+
+![Captura de pantalla de 2019-03-09 13-35-39](https://user-images.githubusercontent.com/38528985/54072265-5b79f380-4270-11e9-88c2-2c3402256033.png)
+
+Vemos, al ejecutar las pruebas, que funcionan correctamente:
+
+![Captura de pantalla de 2019-03-09 13-35-23](https://user-images.githubusercontent.com/38528985/54072266-63d22e80-4270-11e9-8e1b-9c1a1fd12f0d.png)
