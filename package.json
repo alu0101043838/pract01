@@ -1,0 +1,19 @@
+{
+  "name": "p4-t2-networking-alu0101043838",
+  "version": "1.0.0",
+  "description": "## Estableciendo conexiones con sockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838#readme"
+}
