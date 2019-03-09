@@ -39,7 +39,7 @@ describe('LDJClient', () => {
   	assert.throws(() => {
   	   new LDJClient(null);
   	});
-  		 done();
+  	   done();
   });
 
   it('should emit a data event that is not JSON', done => {
