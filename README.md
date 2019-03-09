@@ -140,6 +140,7 @@ Luego, ejecutando npm test, se realiza la ejecución de prueba:
 ## Testability
 
 Este ejercicio lo que nos pide es añadir dos pruebas unitarias:
+
    - La primera, para para un solo mensaje que se divide en dos o más eventos de datos desde el stream.
    - La segunda, que pase un null al constructor LDJClient, y lance un error.
    
@@ -156,5 +157,20 @@ Vemos, al ejecutar las pruebas, que funcionan correctamente:
 ![Captura de pantalla de 2019-03-09 13-35-23](https://user-images.githubusercontent.com/38528985/54072266-63d22e80-4270-11e9-8e1b-9c1a1fd12f0d.png)
 
 ## Robustness
+
+La primera pregunta nos dice: El LDJClient ya maneja el caso en el que una cadena JSON con el formato correcto se divide en varias líneas. ¿Qué sucede si los datos entrantes no son una cadena JSON con el formato correcto?
+
+  - El programa fallaría porque no sabe manejar ese tipo de errores.
+
+La segunda pregunta nos pide añadir una prueba que envíe un evento de datos que no sea JSON.
+
+  - Como hicimos con anterioridad, añadimos la prueba en el fichero 'ldj-client-test.js', un assert que emita un stream que no sea JSON:
+  
+  ![Captura de pantalla de 2019-03-09 13-54-31](https://user-images.githubusercontent.com/38528985/54072456-e8be4780-4272-11e9-941c-d0519074fd88.png)
+  
+Comprobamos que la prueba funciona correctamente:
+
+![Captura de pantalla de 2019-03-09 13-54-18](https://user-images.githubusercontent.com/38528985/54072462-fb388100-4272-11e9-9470-f544ce49e1c9.png)
+ 
 
 
