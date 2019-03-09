@@ -1,5 +1,9 @@
 # p4-t2-networking-alu0101043838
 
+## Integración continua con Travis
+
+BADGE: [![Build Status](https://travis-ci.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838.svg?token=Sx6sZ2qtpxBy4Pycr9Pq&branch=master)](https://travis-ci.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838)
+
 ## Estableciendo conexiones con sockets
 
 En este capítulo, aprenderemos a crear Sockets utilizando node.js
@@ -130,3 +134,62 @@ Visualizando el contenido del fichero package.json, quedaría así:
 Luego, ejecutando npm test, se realiza la ejecución de prueba:
 
 ![captura de pantalla de 2019-03-04 12-48-32](https://user-images.githubusercontent.com/38528985/53748548-71b53780-3e9d-11e9-86af-7eb507ddb108.png)
+
+## Ejercicios
+
+## Testability
+
+Este ejercicio lo que nos pide es añadir dos pruebas unitarias:
+
+   - La primera, para para un solo mensaje que se divide en dos o más eventos de datos desde el stream.
+   - La segunda, que pase un null al constructor LDJClient, y lance un error.
+   
+Lo que hacemos es editar el fichero 'ldj-client-test.js', añadiendo las pruebas:
+
+![Captura de pantalla de 2019-03-09 13-41-10](https://user-images.githubusercontent.com/38528985/54072304-0c808e00-4271-11e9-8a0f-92d790fccfb5.png)
+
+Es importante, añadir en el constructor, la opcion para comprobar si el stream es null, y en caso de que sea así, aparezca el error por pantalla:
+
+![Captura de pantalla de 2019-03-09 13-37-55](https://user-images.githubusercontent.com/38528985/54072285-ad227e00-4270-11e9-9882-ed19ada2fa57.png)
+
+Vemos, al ejecutar las pruebas, que funcionan correctamente:
+
+![Captura de pantalla de 2019-03-09 13-35-23](https://user-images.githubusercontent.com/38528985/54072266-63d22e80-4270-11e9-8e1b-9c1a1fd12f0d.png)
+
+## Robustness
+
+La primera pregunta nos dice: El LDJClient ya maneja el caso en el que una cadena JSON con el formato correcto se divide en varias líneas. ¿Qué sucede si los datos entrantes no son una cadena JSON con el formato correcto?
+
+  - El programa fallaría porque no sabe manejar ese tipo de errores.
+
+La segunda pregunta nos pide añadir una prueba que envíe un evento de datos que no sea JSON.
+
+  - Como hicimos con anterioridad, añadimos la prueba en el fichero 'ldj-client-test.js', un assert que emita un stream que no sea JSON:
+  
+  ![Captura de pantalla de 2019-03-09 13-54-31](https://user-images.githubusercontent.com/38528985/54072456-e8be4780-4272-11e9-941c-d0519074fd88.png)
+  
+Comprobamos que la prueba funciona correctamente:
+
+![Captura de pantalla de 2019-03-09 13-54-18](https://user-images.githubusercontent.com/38528985/54072462-fb388100-4272-11e9-9470-f544ce49e1c9.png)
+ 
+La tercera pregunta nos dice: ¿Qué sucede si el último evento de datos completa un mensaje JSON, pero sin la nueva línea final?
+
+  - Lo que sucede es que el programa fallaría, porque no sabe manejar ese tipo de errores.
+  
+La cuarta pregunta nos pide escribir un caso en el que el objeto de flujo envíe un evento de datos que contenga JSON pero no una nueva línea, seguido de un evento de cierre.
+
+  - Creamos una prueba unitaria en 'ldj-client-test.js' donde añadimos el stream que emite el evento de cierre:
+  
+  ![Captura de pantalla de 2019-03-09 14-25-43](https://user-images.githubusercontent.com/38528985/54072752-3fc61b80-4277-11e9-9671-d676ab6cd8c9.png)
+  
+  - Modificamos el constructor añadiendo un stream.on donde comprueba si se encuentra el '}' final, y no el salto de línea:
+  
+  ![Captura de pantalla de 2019-03-09 14-26-11](https://user-images.githubusercontent.com/38528985/54072757-4f456480-4277-11e9-81a1-00a9c391ed62.png)
+  
+Comprobamos que funciona correctamente:
+
+![Captura de pantalla de 2019-03-09 14-26-31](https://user-images.githubusercontent.com/38528985/54072762-5bc9bd00-4277-11e9-8d63-3c828fb7697c.png)
+
+La última pregunta nos dice: ¿Debería LDJClient emitir un evento cercano para sus listeners?
+
+  - Debería emitirlo cuando sus listeners no estén enviando nada y también cuando hayan avisado de que cierran la conexión.
