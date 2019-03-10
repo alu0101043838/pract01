@@ -4,7 +4,7 @@
   "description": "## Integración continua con Travis",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838#readme",
   "keywords": []
+"devDependencies": {
+  "mocha": "3.4.2"
 }
+}
+
 
 
