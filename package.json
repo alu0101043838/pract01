@@ -1,4 +1,4 @@
-=======
+{
   "requires": true,
   "lockfileVersion": 1,
   "dependencies": {
@@ -17,5 +17,4 @@
   "devDependencies": {
     "gulp": "^3.9.1"
   }
->>>>>>> 48ca934921d92333362f025c14a3d4bff2e84873
 }
