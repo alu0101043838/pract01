@@ -1,8 +1,4 @@
 # p4-t2-networking-alu0101043838
-<<<<<<< HEAD
-# p5-t3-websockets-alu0101043838
-# p5-t3-websockets-alu0101043838
-=======
 
 ## Integración continua con Travis
 
