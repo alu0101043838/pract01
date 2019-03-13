@@ -39,7 +39,7 @@ describe('LDJClient', () => {
   	assert.throws(() => {
   	   new LDJClient(null);
   	});
-  		 done();
+  	   done();
   });
 
   it('should emit a data event that is not JSON', done => {
@@ -50,11 +50,11 @@ describe('LDJClient', () => {
   });
 
   it('should show messages without newline followed by a close event', done => {
-		client.on('message', message => {
-			assert.deepEqual(message, {foo: 'bar' });
-			done();
-		});
-		  stream.emit('data', '{"foo": "bar"}');
-		  stream.emit('close');
+	client.on('message', message => {
+       		assert.deepEqual(message, {foo: 'bar' });
+		done();
+	});
+	  stream.emit('data', '{"foo": "bar"}');
+	  stream.emit('close');
   });
 });

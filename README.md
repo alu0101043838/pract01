@@ -4,6 +4,8 @@
 
 BADGE: [![Build Status](https://travis-ci.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838.svg?token=Sx6sZ2qtpxBy4Pycr9Pq&branch=master)](https://travis-ci.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838)
 
+![Captura de pantalla de 2019-03-09 14-59-41](https://user-images.githubusercontent.com/38528985/54073190-05ab4880-427c-11e9-9428-e27cdadcd1d1.png)
+
 ## Estableciendo conexiones con sockets
 
 En este capítulo, aprenderemos a crear Sockets utilizando node.js
@@ -193,3 +195,4 @@ Comprobamos que funciona correctamente:
 La última pregunta nos dice: ¿Debería LDJClient emitir un evento cercano para sus listeners?
 
   - Debería emitirlo cuando sus listeners no estén enviando nada y también cuando hayan avisado de que cierran la conexión.
+>>>>>>> 59be09997e8787c40907becf28f695b95e5d3248

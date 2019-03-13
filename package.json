@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "p4-t2-networking-alu0101043838",
   "version": "1.0.0",
   "description": "## Integración continua con Travis",
@@ -40,4 +41,24 @@
 
 
 
+=======
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "gulp-cli": "^2.0.1",
+    "gulp-shell": "^0.7.0",
+    "node-watch": "^0.6.0",
+    "promise": {
+      "integrity": "sha512-EIyzM39FpVOMbqgzEHhxdrEhtOSDOtjMZQ0M6iVfCE+kWNgCkAyOdnuCWqfmflylftfadU6FkiMgHZA2kUzwRw==",
+      "requires": {
+        "asap": "~2.0.6"
+      },
+      "resolved": "https://registry.npmjs.org/promise/-/promise-8.0.2.tgz",
+      "version": "8.0.2"
+    }
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+>>>>>>> 48ca934921d92333362f025c14a3d4bff2e84873
 }
