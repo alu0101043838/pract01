@@ -1,47 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "p4-t2-networking-alu0101043838",
-  "version": "1.0.0",
-  "description": "## Integración continua con Travis",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838/issues"
-  },
-  "homepage": "https://github.com/ULL-ESIT-DSI-1819/p4-t2-networking-alu0101043838#readme",
-  "keywords": []
-"devDependencies": {
-  "mocha": "3.4.2"
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
   "requires": true,
   "lockfileVersion": 1,
   "dependencies": {
@@ -60,5 +17,4 @@
   "devDependencies": {
     "gulp": "^3.9.1"
   }
->>>>>>> 48ca934921d92333362f025c14a3d4bff2e84873
 }

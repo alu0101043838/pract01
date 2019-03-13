@@ -195,4 +195,15 @@ Comprobamos que funciona correctamente:
 La última pregunta nos dice: ¿Debería LDJClient emitir un evento cercano para sus listeners?
 
   - Debería emitirlo cuando sus listeners no estén enviando nada y también cuando hayan avisado de que cierran la conexión.
+
+## RETO: Realizar un chat:
+
+## Código:
+
+![Captura de pantalla de 2019-03-13 16-32-53](https://user-images.githubusercontent.com/38528985/54296953-c186b380-45ad-11e9-8c72-9b25a933c350.png)
+
+## Vemos al ejecutar:
+
+![Captura de pantalla de 2019-03-13 16-33-23](https://user-images.githubusercontent.com/38528985/54296998-d06d6600-45ad-11e9-87ed-1f01dcda88e1.png)
+
 >>>>>>> 59be09997e8787c40907becf28f695b95e5d3248
