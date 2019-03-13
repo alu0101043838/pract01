@@ -195,4 +195,3 @@ Comprobamos que funciona correctamente:
 La última pregunta nos dice: ¿Debería LDJClient emitir un evento cercano para sus listeners?
 
   - Debería emitirlo cuando sus listeners no estén enviando nada y también cuando hayan avisado de que cierran la conexión.
->>>>>>> 59be09997e8787c40907becf28f695b95e5d3248
